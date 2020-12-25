@@ -29,6 +29,8 @@ package hellofx;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -47,7 +49,14 @@ public class HelloFX extends Application {
         imageView.setFitHeight(200);
         imageView.setPreserveRatio(true);
 
-        VBox root = new VBox(30, imageView, label);
+        Button helloBtn = new Button("Hey");
+        helloBtn.setOnAction(actionEvent ->
+            new Alert(
+                Alert.AlertType.INFORMATION,
+                "GraalVM & Gluon are Great"
+            ).show()
+        );
+        VBox root = new VBox(30, imageView, label, helloBtn);
         root.setAlignment(Pos.CENTER);
         Scene scene = new Scene(root, 640, 480);
         scene.getStylesheets().add(HelloFX.class.getResource("styles.css").toExternalForm());
