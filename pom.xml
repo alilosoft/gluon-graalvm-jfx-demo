@@ -83,19 +83,6 @@
                 <client.target>host</client.target>
             </properties>
         </profile>
-
-        <profile>
-            <id>ios</id>
-            <properties>
-                <client.target>ios</client.target>
-            </properties>
-        </profile>
-        <profile>
-            <id>android</id>
-            <properties>
-                <client.target>android</client.target>
-            </properties>
-        </profile>
     </profiles>
 
 </project>
