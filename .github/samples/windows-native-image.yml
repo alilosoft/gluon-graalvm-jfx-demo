@@ -1,4 +1,4 @@
-name: Windows
+name: GraalVM Native Image
 
 on:
   push:
@@ -24,12 +24,7 @@ jobs:
       - name: Make staging directory
         run: mkdir staging
 
-      - name: Gluon License
-        uses: gluonhq/gluon-build-license@v1
-        with:
-          gluon-license: ${{ secrets.GLUON_LICENSE }}
-
-      - name: Gluon Build
+      - name: Build native image with GraalVM
         run: mvn -Pdesktop client:build
         env:
           GRAALVM_HOME: ${{ env.JAVA_HOME }}

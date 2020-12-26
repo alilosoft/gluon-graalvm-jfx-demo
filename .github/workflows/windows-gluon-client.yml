@@ -1,4 +1,4 @@
-name: Windows
+name: Gluon Client Build
 
 on:
   push:
@@ -24,10 +24,15 @@ jobs:
       - name: Make staging directory
         run: mkdir staging
 
-      - name: Build native image with GraalVM
-      run: mvn -Pdesktop client:build
-      env:
-        GRAALVM_HOME: ${{ env.JAVA_HOME }}
+      - name: Gluon License
+        uses: gluonhq/gluon-build-license@v1
+        with:
+          gluon-license: ${{ secrets.GLUON_LICENSE }}
+
+      - name: Gluon Build
+        run: mvn -Pdesktop client:build
+        env:
+          GRAALVM_HOME: ${{ env.JAVA_HOME }}
 
       - name: Copy native client to staging
         run: cp -r target/client/x86_64-windows/HelloFX.exe staging
