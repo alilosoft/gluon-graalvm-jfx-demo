@@ -12,10 +12,10 @@
 
 
     <properties>
-        <main.class>formsfx.Demo</main.class>
+        <main.class>hellofx.HelloFX</main.class>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>11</maven.compiler.release>
-        <javafx.version>11.0.1</javafx.version>
+        <javafx.version>15.0.1</javafx.version>
         <charm.version>6.0.6</charm.version>
         <glisten.afterburner.version>2.0.5</glisten.afterburner.version>
         <attach.version>4.0.10</attach.version>
