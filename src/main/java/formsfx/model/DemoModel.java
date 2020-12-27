@@ -32,7 +32,7 @@ public final class DemoModel {
      * These are the resource bundles for german and english.
      */
     private ResourceBundle rbDE = ResourceBundle.getBundle("demo-locale", new Locale("de", "CH"));
-    private ResourceBundle rbEN = ResourceBundle.getBundle("demo-locale", new Locale("en", "UK"));
+    private ResourceBundle rbEN = ResourceBundle.getBundle("demo-locale", new Locale("en", "US"));
 
     /**
      * The default locale is English, thus the {@code ResourceBundleService} is
