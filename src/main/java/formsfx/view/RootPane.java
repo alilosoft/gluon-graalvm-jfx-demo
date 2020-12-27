@@ -3,6 +3,7 @@ package formsfx.view;
 import com.dlsc.formsfx.model.structure.Section;
 import com.dlsc.formsfx.view.renderer.FormRenderer;
 import com.dlsc.formsfx.view.util.ViewMixin;
+import formsfx.Demo;
 import formsfx.model.DemoModel;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
@@ -69,8 +70,7 @@ public class RootPane extends BorderPane implements ViewMixin {
      */
     @Override
     public void initializeSelf() {
-        getStylesheets().add(getClass().getResource("style.css").toExternalForm());
-        //getStyleClass().add("root-pane");
+        getStylesheets().add(Demo.class.getResource("style.css").toExternalForm());
     }
 
     /**
